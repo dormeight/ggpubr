@@ -102,7 +102,7 @@ stat_compare_means <- function(mapping = NULL, data = NULL,
                      label = NULL, label.x.npc = "left", label.y.npc = "top",
                      label.x = NULL, label.y = NULL, tip.length = 0.03,
                      bracket.size = 0.3, step.increase = 0,
-                     symnum.args = list(),
+                     symnum.args = list(),vjust=0,margin_top=0.15,
                      geom = "text", position = "identity",  na.rm = FALSE, show.legend = NA,
                     inherit.aes = TRUE, ...) {
 
@@ -143,7 +143,7 @@ stat_compare_means <- function(mapping = NULL, data = NULL,
     ggsignif::geom_signif(comparisons = comparisons, y_position = label.y,
                           test = method, test.args = method.args,
                           step_increase = step.increase, size = bracket.size, textsize = size, color = color,
-                          map_signif_level = map_signif_level, tip_length = tip.length,
+                          map_signif_level = map_signif_level, tip_length = tip.length,margin_top=margin_top,vjust=vjust,
                           data = data)
   }
 
